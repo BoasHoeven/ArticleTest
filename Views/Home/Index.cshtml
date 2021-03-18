@@ -1,0 +1,28 @@
+﻿@model IEnumerable<JokesWebApp.Models.NewsArticle>
+
+@{
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Wado Ryu</h1>
+	<div id="container2">
+		@{
+			// csharp code block
+			// everything in here is code, don't have to use @
+			int counter = 0;
+		}
+		@foreach (var item in Model)
+		{
+			<div>
+				<div id="title">@Html.DisplayFor(modelItem => item.Title)</div>
+				<div>@Html.DisplayFor(modelItem => item.Content)</div>
+			</div>
+			if (counter == 2)
+				break;
+			counter++;
+		}
+	</div>
+</div>
+
+
