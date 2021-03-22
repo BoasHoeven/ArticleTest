@@ -24,7 +24,10 @@ namespace JokesWebApp.Controllers
 
 		public async Task<IActionResult> Index()
 		{
-			return View(await _context.NewsArticle.ToListAsync());
+			return View(await _context.NewsArticle
+								.OrderByDescending(d => d.DatePublished)
+								.Take(3).ToListAsync()
+						);
 		}
 
 		public IActionResult Privacy()

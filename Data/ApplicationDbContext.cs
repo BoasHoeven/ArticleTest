@@ -13,7 +13,7 @@ namespace JokesWebApp.Data
 			: base(options)
 		{
 		}
-		public DbSet<JokesWebApp.Models.Joke> Joke { get; set; }
+
 		public DbSet<JokesWebApp.Models.NewsArticle> NewsArticle { get; set; }
 	}
 }

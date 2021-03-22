@@ -56,12 +56,15 @@ namespace JokesWebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ID,Title,Content")] NewsArticle newsArticle)
         {
+            newsArticle.DatePublished = DateTime.Now;
+
             if (ModelState.IsValid)
             {
                 _context.Add(newsArticle);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
             return View(newsArticle);
         }
 

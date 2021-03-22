@@ -52,25 +52,13 @@ button.accept-policy {
 }
 
 /* News Article preview */
-#container2 {
+#newsarticles {
     display: flex; /* establish flex container */
     flex-direction: row; /* default value; can be omitted */
     flex-wrap: nowrap; /* default value; can be omitted */
-    justify-content: space-between; /* switched from default (flex-start, see below) */
-    /*background-color: lightyellow;*/
+    justify-content: space-evenly; /* switched from default (flex-start, see below) space-between */
 }
 
-#container2 > div {
-    width: 100px;
-    height: 100px;
-    border: 2px solid black;
-}
-
-#title
-{
-    background: black;
-    color: white;
-}
 
 /* Sticky footer styles
 -------------------------------------------------- */

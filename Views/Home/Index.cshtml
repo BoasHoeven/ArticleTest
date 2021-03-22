@@ -5,22 +5,16 @@
 }
 
 <div class="text-center">
-	<h1 class="display-4">Wado Ryu</h1>
-	<div id="container2">
-		@{
-			// csharp code block
-			// everything in here is code, don't have to use @
-			int counter = 0;
-		}
+	<div id="newsarticles">
 		@foreach (var item in Model)
 		{
-			<div>
-				<div id="title">@Html.DisplayFor(modelItem => item.Title)</div>
-				<div>@Html.DisplayFor(modelItem => item.Content)</div>
+			<div class="card" style="width: 18rem;">
+				<div class="card-body">
+					<h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+					<p class="card-text">@Html.DisplayFor(modelItem => item.Content)</p>
+					<a href="/NewsArticles/Details/@Html.DisplayFor(modelItem => item.ID)" class="card-link"> Lees meer...</a>
+				</div>
 			</div>
-			if (counter == 2)
-				break;
-			counter++;
 		}
 	</div>
 </div>
