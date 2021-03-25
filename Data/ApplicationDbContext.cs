@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using JokesWebApp.Models;
+using WadoRyu.Models;
 
 namespace JokesWebApp.Data
 {
@@ -15,5 +12,7 @@ namespace JokesWebApp.Data
 		}
 
 		public DbSet<JokesWebApp.Models.NewsArticle> NewsArticle { get; set; }
+
+		public DbSet<WadoRyu.Models.Video> Video { get; set; }
 	}
 }
